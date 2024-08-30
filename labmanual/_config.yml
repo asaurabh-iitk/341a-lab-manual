@@ -3,8 +3,9 @@
 
 title: The heat transfer laboratory manual
 author: The class of ME341A
+copyright: "2024"
 logo: htlogo.png
-
+logo_dark: htlogo-dark.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -31,4 +32,4 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
-  html_favicon: ht.ico
+  favicon: ht.ico
