@@ -4,6 +4,6 @@
 format: jb-book
 root: intro
 chapters:
-- file: natural-convection.md
-- file: natural-convection.ipynb
+- file: natural-convection
+- file: natural-convection-dataanalysis
 - file: markdown-notebooks
