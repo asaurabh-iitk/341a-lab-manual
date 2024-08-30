@@ -3,7 +3,9 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: natural-convection
-  section:
-    - file: natural-convection-dataanalysis
+parts:
+  - caption: Convection
+    chapters:
+    - file: natural-convection
+      sections:
+      - file: natural-convection-dataanalysis
