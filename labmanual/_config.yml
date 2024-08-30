@@ -4,8 +4,15 @@
 title: The heat transfer laboratory manual
 author: The class of ME341A
 copyright: "2024"
-logo: htlogo.png
-logo_dark: htlogo-dark.png
+#logo: htlogo.png
+#logo_dark: htlogo-dark.png
+
+sphinx:
+  config:
+    html_theme_options: 
+      logo:
+        image_light: htlogo.png
+        image_dark: htlogo-dark.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
