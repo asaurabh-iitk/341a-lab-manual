@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "341a-lab-manual"
+version = "0.1.0"
+description = "The Heat Transfer Laboratory Manual"
+authors = ["asaurabh-iitk <83907673+asaurabh-iitk@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+jupyter-book = "^1.0.2"
+ipykernel = "^6.29.5"
+pandas = "^2.2.2"
+polars = "^1.6.0"
+altair = "^5.4.1"
+plotly = "^5.24.0"
+ghp-import = "^2.1.0"
+matplotlib = "^3.9.2"
+numpy = "^2.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

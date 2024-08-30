@@ -1,0 +1,21 @@
+jupyter-book
+matplotlib
+numpy
+
+Commands:
+one time: 
+---------
+pip install -U poetry
+poetry init
+"It’ll ask a few questions to setup the package. Default is to press Enter.
+When it asks to define your main dependencies → Type in “no”"
+poetry add jupyter-book ipykernel pandas polars altair plotly ghp-import matplotlib numpy
+poetry run jupyter-book create myfirstbook/
+
+Every time for changes:
+-----------------------
+poetry run jupyter-book build myfirstbook
+git add -A
+git commit -m "publish"
+git push
+poetry run ghp-import -n -p -f myfirstbook/_build/html
