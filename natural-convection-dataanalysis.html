@@ -344,7 +344,7 @@ document.write(`
 <p>Analysis of data is conducted using python, specifically with the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html">pandas</a> dataframe here. Units are applied to numerical values with the help of <a class="reference external" href="https://pint.readthedocs.io/en/stable/index.html">pint</a>.</p>
 <section id="heat-transfer-coefficient">
 <h2>Heat transfer coefficient<a class="headerlink" href="#heat-transfer-coefficient" title="Link to this heading">#</a></h2>
-<p>As per Newton’s law of cooling, <span class="math notranslate nohighlight">\(\dot{q}'' = h\Delta T\)</span>, we can get <span class="math notranslate nohighlight">\(h\)</span> (W/m<sup>2</sup>) given <span class="math notranslate nohighlight">\(T_\infty\)</span> and <span class="math notranslate nohighlight">\(\dot{q}''\)</span>. At steady state, convective heat loss from the cylinder is equal to the heat input from the heater – <strong>45 W</strong> for this data set. The length and diameter of the cylinder are 50 cm and 3.8 cm respectively.</p>
+<p>As per Newton’s law of cooling, <span class="math notranslate nohighlight">\(\dot{q}'' = h\Delta T\)</span>, we can get <span class="math notranslate nohighlight">\(h\)</span> (W/m<sup>2</sup>-K) given <span class="math notranslate nohighlight">\(T_\infty\)</span> and <span class="math notranslate nohighlight">\(\dot{q}''\)</span>. At steady state, convective heat loss from the cylinder is equal to the heat input from the heater – <strong>45 W</strong> for this data set. The length and diameter of the cylinder are 50 cm and 3.8 cm respectively.</p>
 <p><span class="math notranslate nohighlight">\(T_\infty\)</span> was measured to be <strong>31<sup>o</sup>C</strong> for this data set.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -399,13 +399,13 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The corresponding convective heat transfer coefficient</span>
-<span class="n">h</span> <span class="o">=</span> <span class="p">(</span> <span class="n">fluxQ</span><span class="o">/</span><span class="p">(</span><span class="n">meanTs</span> <span class="o">-</span> <span class="n">tcAmb</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">h</span> <span class="o">=</span> <span class="p">(</span> <span class="n">fluxQ</span><span class="o">/</span><span class="p">(</span><span class="n">meanTs</span> <span class="o">-</span> <span class="n">tcAmb</span><span class="p">)</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span> <span class="p">)</span>  <span class="c1"># to base units to convert to absolute in Kelvin</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{:.1e~P}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">h</span><span class="p">))</span> <span class="c1"># Note the number of significant digits cannot be more than 2</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.1×10² W/Δ°C/m²
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.1×10² W/K/m²
 </pre></div>
 </div>
 </div>
