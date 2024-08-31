@@ -341,108 +341,71 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-analysis">
 <h1>Data analysis<a class="headerlink" href="#data-analysis" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span><span class="o">,</span> <span class="nn">math</span>
-
-<span class="n">tcdata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/nat-conv-T.csv&#39;</span><span class="p">)</span>
-<span class="n">tcdata</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Location (cm)</th>
-      <th>Temperature (C)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>5</td>
-      <td>34</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>10</td>
-      <td>42</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>20</td>
-      <td>45</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>30</td>
-      <td>47</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meanTs</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">tcdata</span><span class="p">[</span><span class="s1">&#39;Temperature (C)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">meanTs</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>38.0
-</pre></div>
-</div>
-</div>
-</div>
+<p>Analysis of data is conducted using python, specifically with the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html">pandas</a> dataframe here. Units are applied to numerical values with the help of <a class="reference external" href="https://pint.readthedocs.io/en/stable/index.html">pint</a>.</p>
 <section id="heat-transfer-coefficient">
 <h2>Heat transfer coefficient<a class="headerlink" href="#heat-transfer-coefficient" title="Link to this heading">#</a></h2>
 <p>As per Newton’s law of cooling, <span class="math notranslate nohighlight">\(\dot{q}'' = h\Delta T\)</span>, we can get <span class="math notranslate nohighlight">\(h\)</span> (W/m<sup>2</sup>) given <span class="math notranslate nohighlight">\(T_\infty\)</span> and <span class="math notranslate nohighlight">\(\dot{q}''\)</span>. At steady state, convective heat loss from the cylinder is equal to the heat input from the heater – <strong>45 W</strong> for this data set. The length and diameter of the cylinder are 50 cm and 3.8 cm respectively.</p>
 <p><span class="math notranslate nohighlight">\(T_\infty\)</span> was measured to be <strong>31<sup>o</sup>C</strong> for this data set.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fluxQ</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="mi">50</span><span class="o">/</span><span class="p">(</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">*</span><span class="mf">0.038</span><span class="o">*</span><span class="mf">0.50</span> <span class="p">),</span><span class="mi">0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fluxQ</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>838.0
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># packages required for analysing data</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span><span class="o">,</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">pint</span> <span class="kn">import</span> <span class="n">UnitRegistry</span>
+<span class="c1"># setting unit configuration</span>
+<span class="n">unit</span> <span class="o">=</span> <span class="n">UnitRegistry</span><span class="p">(</span><span class="n">autoconvert_offset_to_baseunit</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># thermocouple data</span>
+<span class="n">tcdata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/nat-conv-T.csv&#39;</span><span class="p">)</span>
+<span class="c1"># last data (indexed as [-1]) tcdata csv file is ambient temperature</span>
+<span class="n">tcAmb</span> <span class="o">=</span> <span class="n">tcdata</span><span class="p">[</span><span class="s1">&#39;Temperature (C)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">degC</span>
+<span class="n">tcdata</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="c1"># other experiment settings</span>
+<span class="n">cylD</span> <span class="o">=</span> <span class="mf">0.038</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">m</span>
+<span class="n">cylL</span> <span class="o">=</span> <span class="mf">0.50</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">m</span>
+<span class="n">Qtot</span> <span class="o">=</span> <span class="mi">45</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">watt</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tcAmb</span><span class="o">=</span><span class="mi">31</span>
-<span class="n">h</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">fluxQ</span><span class="o">/</span><span class="p">(</span><span class="n">meanTs</span><span class="o">-</span><span class="n">tcAmb</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Surface temperature in Newtons law taken as average of all surface TCs</span>
+<span class="n">meanTs</span> <span class="o">=</span> <span class="p">(</span><span class="n">tcdata</span><span class="p">[</span><span class="s1">&#39;Temperature (C)&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="p">)</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">degC</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{:.1f~P}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">meanTs</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>38.1 °C
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Heat flux assuming uniformly distributed heater</span>
+<span class="n">fluxQ</span> <span class="o">=</span> <span class="n">Qtot</span><span class="o">/</span><span class="p">(</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">*</span> <span class="n">cylD</span> <span class="o">*</span> <span class="n">cylL</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{:.1e~P}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fluxQ</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.5×10² W/m²
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The corresponding convective heat transfer coefficient</span>
+<span class="n">h</span> <span class="o">=</span> <span class="p">(</span> <span class="n">fluxQ</span><span class="o">/</span><span class="p">(</span><span class="n">meanTs</span> <span class="o">-</span> <span class="n">tcAmb</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{:.1e~P}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">h</span><span class="p">))</span> <span class="c1"># Note the number of significant digits cannot be more than 2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.1×10² W/Δ°C/m²
 </pre></div>
 </div>
 </div>
