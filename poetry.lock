@@ -657,6 +657,23 @@ unicode = ["unicodedata2 (>=15.1.0)"]
 woff = ["brotli (>=1.0.1)", "brotlicffi (>=0.8.0)", "zopfli (>=0.1.4)"]
 
 [[package]]
+name = "furo"
+version = "2024.8.6"
+description = "A clean customisable Sphinx documentation theme."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "furo-2024.8.6-py3-none-any.whl", hash = "sha256:6cd97c58b47813d3619e63e9081169880fbe331f0ca883c871ff1f3f11814f5c"},
+    {file = "furo-2024.8.6.tar.gz", hash = "sha256:b63e4cee8abfc3136d3bc03a3d45a76a850bada4d6374d24c1716b0e01394a01"},
+]
+
+[package.dependencies]
+beautifulsoup4 = "*"
+pygments = ">=2.7"
+sphinx = ">=6.0,<9.0"
+sphinx-basic-ng = ">=1.0.0.beta2"
+
+[[package]]
 name = "ghp-import"
 version = "2.1.0"
 description = "Copy your docs directly to the gh-pages branch."
@@ -1673,20 +1690,6 @@ files = [
 ptyprocess = ">=0.5"
 
 [[package]]
-name = "piccolo-theme"
-version = "0.24.0"
-description = "A modern Sphinx theme."
-optional = false
-python-versions = ">=3.6.0"
-files = [
-    {file = "piccolo_theme-0.24.0-py3-none-any.whl", hash = "sha256:6de69688ba87963857c11ddb0d98987b9a4814d508cce2d0ecc83e3680c9da12"},
-    {file = "piccolo_theme-0.24.0.tar.gz", hash = "sha256:09cf70f4bb6dba4ebcd14966550c292339c11d931c9533221cd3dbffeb1d1bd9"},
-]
-
-[package.dependencies]
-sphinx = "*"
-
-[[package]]
 name = "pillow"
 version = "10.4.0"
 description = "Python Imaging Library (Fork)"
@@ -2520,6 +2523,23 @@ lint = ["flake8 (>=6.0)", "importlib-metadata (>=6.0)", "mypy (==1.10.1)", "pyte
 test = ["cython (>=3.0)", "defusedxml (>=0.7.1)", "pytest (>=8.0)", "setuptools (>=70.0)", "typing_extensions (>=4.9)"]
 
 [[package]]
+name = "sphinx-basic-ng"
+version = "1.0.0b2"
+description = "A modern skeleton for Sphinx themes."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "sphinx_basic_ng-1.0.0b2-py3-none-any.whl", hash = "sha256:eb09aedbabfb650607e9b4b68c9d240b90b1e1be221d6ad71d61c52e29f7932b"},
+    {file = "sphinx_basic_ng-1.0.0b2.tar.gz", hash = "sha256:9ec55a47c90c8c002b5960c57492ec3021f5193cb26cebc2dc4ea226848651c9"},
+]
+
+[package.dependencies]
+sphinx = ">=4.0"
+
+[package.extras]
+docs = ["furo", "ipython", "myst-parser", "sphinx-copybutton", "sphinx-inline-tabs"]
+
+[[package]]
 name = "sphinx-book-theme"
 version = "1.1.3"
 description = "A clean book theme for scientific explanations and documentation with Sphinx"
@@ -3082,4 +3102,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "6d6a5e9fc508479d00f6a04d127fc73e617ecf912812867ae2d092049303c07e"
+content-hash = "7a79ede21cce7e3e3f3bb6a20808cbfc31b9357a96cc47d8e4487ef9a65aa0a1"

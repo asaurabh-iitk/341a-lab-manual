@@ -9,7 +9,13 @@ copyright: "2024"
 
 sphinx:
   config:
-    html_theme: piccolo_theme 
+    html_theme: furo
+    html_theme_options: {
+        light_logo: htlogo.png,
+        dark_logo: htlogo-dark.png,
+}
+# if using piccolo_theme
+#    html_theme: piccolo_theme 
 # if using jupyter-book theme
 #    html_theme_options:
 #      logo:

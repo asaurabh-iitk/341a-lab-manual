@@ -18,7 +18,7 @@ ghp-import = "^2.1.0"
 matplotlib = "^3.9.2"
 numpy = "^2.1.0"
 pint = "^0.24.3"
-piccolo-theme = "^0.24.0"
+furo = "^2024.8.6"
 
 
 [build-system]
