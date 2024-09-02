@@ -9,6 +9,8 @@ copyright: "2024"
 
 sphinx:
   config:
+    pygments_style: sphinx
+    pygments_dark_style: monokai
     html_theme: furo
     html_theme_options: {
         light_logo: htlogo.png,
