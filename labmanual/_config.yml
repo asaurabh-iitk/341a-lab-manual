@@ -9,10 +9,12 @@ copyright: "2024"
 
 sphinx:
   config:
-    html_theme_options: 
-      logo:
-        image_light: htlogo.png
-        image_dark: htlogo-dark.png
+    html_theme: piccolo_theme 
+# if using jupyter-book theme
+#    html_theme_options:
+#      logo:
+#        image_light: htlogo.png
+#        image_dark: htlogo-dark.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

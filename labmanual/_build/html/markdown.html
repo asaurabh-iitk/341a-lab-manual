@@ -1,46 +1,18 @@
-
 <!DOCTYPE html>
 
-
-<html lang="en" data-content_root="./" >
-
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Markdown Files &#8212; The heat transfer laboratory manual</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
-  </script>
-  
-  <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/basic_mod.css?v=9b2032db" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-  
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
-
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -57,296 +29,134 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'markdown';</script>
+    <script src="_static/js/theme.js"></script>
+    <script src="_static/js/petite-vue.js"></script>
     <link rel="icon" href="_static/ht.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
-  </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body data-dark_mode_code_blocks="true">
 
-  
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+<div id="top_nav">
+    
 
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
-  
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
-  
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      
-      
+    <nav>
         
-      
-      <div class="bd-sidebar-primary bd-sidebar">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-
-  
-    
-  
-
-<a class="navbar-brand logo" href="intro.html">
-  
-  
-  
-  
-  
-    
-    
-      
-    
-    
-    <img src="_static/htlogo.png" class="logo__image only-light" alt="The heat transfer laboratory manual - Home"/>
-    <script>document.write(`<img src="_static/htlogo-dark.png" class="logo__image only-dark" alt="The heat transfer laboratory manual - Home"/>`);</script>
-  
-  
-</a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="natural-convection.html">Natural convection over a vertical cylinder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="natural-convection-dataanalysis.html">Data analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-</ul>
-
-    </div>
-</nav></div>
-    </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main" role="main">
-        
-        
-
-<div class="sbt-scroll-pixel-helper"></div>
-
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article d-print-none">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</button></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="_sources/markdown.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-
-
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
-
-
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
-</div></div>
-      
-    </div>
-  
-</div>
-</div>
-              
-              
-
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>Markdown Files</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-roles-and-directives">Sample Roles and Directives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">Learn more</a></li>
-</ul>
-            </nav>
-        </div>
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="intro.html" title="Go to homepage">The heat transfer laboratory manual</a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
 </div>
 
-              
-                
-<div id="searchbox"></div>
-                <article class="bd-article">
-                  
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper"><p class="caption" role="heading"><span class="caption-text">Convection</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="natural-convection.html">Natural convection over a vertical cylinder</a></li>
+</ul>
+
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
   <section class="tex2jax_ignore mathjax_ignore" id="markdown-files">
-<h1>Markdown Files<a class="headerlink" href="#markdown-files" title="Link to this heading">#</a></h1>
+<h1>Markdown Files<a class="headerlink" href="#markdown-files" title="Link to this heading">¶</a></h1>
 <p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
 in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
 called <strong>MyST Markdown</strong>.
 This is a simple file to help you get started and show off some syntax.</p>
 <section id="what-is-myst">
-<h2>What is MyST?<a class="headerlink" href="#what-is-myst" title="Link to this heading">#</a></h2>
+<h2>What is MyST?<a class="headerlink" href="#what-is-myst" title="Link to this heading">¶</a></h2>
 <p>MyST stands for “Markedly Structured Text”. It
 is a slight variation on a flavor of markdown called “CommonMark” markdown,
 with small syntax extensions to allow you to write <strong>roles</strong> and <strong>directives</strong>
@@ -354,7 +164,7 @@ in the Sphinx ecosystem.</p>
 <p>For more about MyST, see <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST Markdown Overview</a>.</p>
 </section>
 <section id="sample-roles-and-directives">
-<h2>Sample Roles and Directives<a class="headerlink" href="#sample-roles-and-directives" title="Link to this heading">#</a></h2>
+<h2>Sample Roles and Directives<a class="headerlink" href="#sample-roles-and-directives" title="Link to this heading">¶</a></h2>
 <p>Roles and directives are two of the most powerful tools in Jupyter Book. They
 are like functions, but written in a markup language. They both
 serve a similar purpose, but <strong>roles are written in one line</strong>, whereas
@@ -370,7 +180,7 @@ that is being called.</p>
 <p>Here is an inline directive to refer to a document: <a class="reference internal" href="markdown-notebooks.html"><span class="doc">Notebooks with MyST Markdown</span></a>.</p>
 </section>
 <section id="citations">
-<h2>Citations<a class="headerlink" href="#citations" title="Link to this heading">#</a></h2>
+<h2>Citations<a class="headerlink" href="#citations" title="Link to this heading">¶</a></h2>
 <p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
 the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
 this: <span id="id1">[<a class="reference internal" href="#id3" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In International Conference on Cognitive Neuroscience. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.">HdHPK14</a>]</span>.</p>
@@ -389,7 +199,7 @@ then the bibliography is inserted with:</p>
 </div>
 </section>
 <section id="learn-more">
-<h2>Learn more<a class="headerlink" href="#learn-more" title="Link to this heading">#</a></h2>
+<h2>Learn more<a class="headerlink" href="#learn-more" title="Link to this heading">¶</a></h2>
 <p>This is just a simple starter to get you started.
 You can learn a lot more at <a class="reference external" href="https://jupyterbook.org">jupyterbook.org</a>.</p>
 </section>
@@ -415,88 +225,52 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
-              
-
-              
-              
-              
-              
-                <footer class="prev-next-footer d-print-none">
-                  
-<div class="prev-next-area">
-</div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-roles-and-directives">Sample Roles and Directives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">Learn more</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
+            <div class="clearer"></div>
           </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
+        </div>
+      </div>
     
-<p class="component-author">
-By The class of ME341A
-</p>
+        <div id="show_right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&lt;</span><span>Page contents</span></a></p>
+        </div>
 
-  </div>
-  
-  <div class="footer-item">
+        <div id="right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:</span></a></p>
+            <div class="page_toc">
+                <ul>
+<li><a class="reference internal" href="#">Markdown Files</a><ul>
+<li><a class="reference internal" href="#what-is-myst">What is MyST?</a></li>
+<li><a class="reference internal" href="#sample-roles-and-directives">Sample Roles and Directives</a></li>
+<li><a class="reference internal" href="#citations">Citations</a></li>
+<li><a class="reference internal" href="#learn-more">Learn more</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
     
 
-  <p class="copyright">
-    
-      © Copyright 2024.
-      <br/>
-    
-  </p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-</div>
-          </footer>
-        
-
-      </main>
+      <div class="clearer"></div>
     </div>
-  </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+            </div>
 
-  <footer class="bd-footer">
-  </footer>
+            <div class="right">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+
+<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
   </body>
 </html>
